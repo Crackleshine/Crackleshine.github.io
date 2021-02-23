@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="css/appstyle.css">
+        <title>grid layout</title>
+        <!--  Include the raphael library from the jslibs directory  -->
+        <script type="text/javascript" src="jslibs/raphael.js"></script>
+        <!--  Include the main.js file with our own javascript code -->
+        <script defer type="text/javascript" src="appscripts/main.js">
+        </script>
+    </head>
+
+  <body>
+    
+    <div class="container">
+      <header class="header" id="headerid">
+        <p>header</p>
+      </header>
+
+      <nav class="sidebar">
+        <p>NAV</p>
+      </nav>
+
+      <article class="content" id="centerDiv">
+     </article>
+
+      <aside class="sidebar" id="aside"> 
+        <p>ASIDE</p>
+        <!-- 2.3 Add a slider to the “<aside>” element in the .html file-->
+        <!-- 2.4 Set slider range between [0,1] (so it can be used for anything with scaling-->
+        <!-- 2.5 Create a label (using the <label> element) for the slider, styled to look reasonable. -->
+        <label for="dot2Sliderlabel" class="silder">Circle Radius</label>
+        <br>
+        <input type="range" id="dot2SliderID" min="0" max="20" step="0.01">
+
+        <!-- 2.7 add a button to the “<aside>” element in the .html file, this will be your “CLEAR” button-->
+          <input type="button" id="CLEARbutton" value="CLEAR">
+
+          <input type="button" id="RESTOREbutton" value="RESTORE">
+      </aside>
+
+      <footer class="footer">
+        <p>footer</p>
+      </footer>
+    </div>
+  
+
+  </body>
+</html>
+
