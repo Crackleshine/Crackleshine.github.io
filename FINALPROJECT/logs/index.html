@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <meta charset="UTF-8">
+        <!-- css + Font -->
+        <link rel="stylesheet" type="text/css" href="../css/appstyle.css">
+        <link href='https://fonts.googleapis.com/css?family=Alegreya SC' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=VT323' rel='stylesheet'>
+
+        <!-- Loads Raphael library for all files in project to see -->
+        <script type="text/javascript" src="jslibs/raphael.js"></script>
+       <!--  module loader with pointer to our main JavaScript code -->
+       <script defer type="text/javascript" src="appscripts/game-main.js">
+        </script>
+        <title>Treetop Trouble Logs</title>
+    </head>
+
+    <body>
+        <div class="Box-0container">
+            <header class ="header">   
+             <h1>Treetop Trouble Logs</h1> 
+            </header>
+            <div class="box-0">
+                <h2 style="font-size:30px;"><u>Week 7</u></h2>
+                <p>I’m thinking of riffing off the standard ball-and-paddle game (a.k.a Breakout by Atari).
+                    A widely known game format, one must use a paddle to clear bricks while ensuring the ball does not fall beyond the paddle. 
+                    The orientation of such games a usually played vertically and the user controls the paddle via the arrow keys. 
+                    I’ll call this ‘Treetop Trouble’</p>
+
+                    <p>My proposal for my final project includes both flipping the game horizontally while also allowing for an element of collaboratives, or competitiveness.
+                    Mashing the concepts from popular game of “pong” into the ball-and-paddle format. I’m imagining that player(s) can control a right paddle via the ‘up’ and ‘down’ arrow keys and the left paddle via the ‘w’ and ‘s’ character keys. The bricks would be centered in the middle of the play area and player(s) must ensure that their respective ball(s) does not fall beyond the x-axis of their respective paddles.
+                    The goal of the game varies on the number of balls in play and if the player(s) are playing competitively or collaboratively.</p>
+                    
+                    <p>Ultimately, the affordance of dual controls in the game ‘Treetop Trouble’ allows for multiplayer or a challenging single player experience.</p>
+   
+            <br>
+            
+                <h2 style="font-size:30px;"><u>Week 8</u></h2>
+                <ul>
+                    <LI>
+                        <strong><p>What does the game do?</p> </strong>
+                        <p>It is a spin on the ball-and-paddle game. You control a paddle to bounce a ball into bricks, the objective is to clear all the bricks by colliding the ball with them. The player loses a life when they let the ball fall beyond the paddle, losing all their lives would equate to a game over</p>
+                    </LI>
+                    <LI>
+                        <strong><p>What are the rules it follows? Can you write down those rules?</p></strong>
+                        <p>So the rules I guess are 
+                            <uL> 1.	The ball collisions: Meaning the logic of the ball colliding with wall, brick and paddle.  </ul>
+                                <uL>2.	The ball cross bounds: if the ball cross the x-axis on either side, left or right.  </ul>
+                                    <uL>3.	The paddle controls: Mapping the W and S keys to the left paddle and the up and down arrows to the left paddle.  </ul>
+                                        <uL> 4.	A life and score counter.  </ul>
+                                            <ul>5. How to reset the game?</ul>
+                                            <p>That’s all I can think off for now.</p>
+                            </p>
+                    </LI>
+                    <LI>
+                        <strong> <p>What information do you want to store for each user?</p></strong>
+                        <p>The information stored will be a user input into the keyboard which control the paddle</p>
+                        <p>Player information will include their live count, a score, and maybe a timer.</p>
+                    </LI>
+                    <LI>
+                        <strong><p>What can the user do? What does the program do for each user action?</p></strong>
+                        <p>User can start the game and move the paddles with their keyboards and mouse clicks. Mouse click starts the game keydown and keyup on the ‘ArrowUp/ArrowDown’ control the right paddle ‘/W/S’ controls the left paddle</p>
+                    </LI>
+                    <LI>
+                        <strong> <p>When does the game end?</p></strong>
+                        <p>Game Win=player clear all the bricks </p>
+                        <p>Game Lose=player loses all their lives  </p>
+                            
+                    </LI>
+                </ul>
+                <br>
+                <h2 style="font-size:30px;"><u>Week 9</u></h2>
+                    
+                <p>Bugs abound! I have part of the game logic down, i.e. paddle movement, ball collisions (from Week 11 Codealong) with 
+                    wall and paddle (after struggling over this but finding this 
+                    <a href="https://developer.mozilla.org/en-US/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Collision_detection">source</a>,
+                    this will be really useful in future), 
+                    as well as the initial params down, ball and paddle params (x and y pos, radius, length and breadth etc etc.). 
+                    The paddle bounce feature really took the longest as I had to find a way to define the game logic to recognize 
+                    the ball’s y-position to be between the two y-pos that represent the height of the paddle. 
+                    They seem to be working fine for now.
+                </p>
+
+                <p>
+                    I’m currently trying to figure out how to generate the bricks, I previously believed that my game 
+                    would not require an array but generating the hard coding in each brick’s params and x and y axis 
+                    seems insane. I’m going to work towards storing the brick parameters into an array so that by changing 
+                    the brick row and column value, the array of bricks will be generated per their respective row and column 
+                    number according to preassigned attributes (padding, color and border etc). I’ll like to thank the 
+                    ‘hundredCircles’ challenge for this insight.
+                </p>
+
+                 <p>
+                    My paddles, left and right, both face the problem of being unable to move once they have touched the 
+                    edge of the paper.rect, I’m thinking I have to limit the paddle.animate function before it reaches 
+                    the edge but I’m actually not very sure why, still debugging.
+                </p>
+
+                 <p>
+                    I still have to figure out a way to score lives and I think I have an idea of how to record 
+                    once a ball has been ‘missed by the paddle’ but taking the same concepts of limits use to call the paddle bounce function.
+                 </p>
+
+                <p>
+                    Also, I realized I need to use an array for my bricks, I think I’m trying to figure out how to use a ‘multideimssional’ array as outlined 
+                    <a href="https://stackoverflow.com/questions/24850618/difference-between-array-length-and-array0-length-in-a-multi-dimensional-array#:~:text=length%20total%20rows%20of%20Block,total%20count)....">here</a>.
+                </p>
+
+                <p>
+                    Besides the brick problem, I’ve found a switch/case function <a href="https://stackoverflow.com/questions/8916620/disable-arrow-key-scrolling-in-users-browser">here</a>
+                    to prevent the arrow keys from moving the page, it was super useful.
+                </p>
+
+                <p>
+                    For the view and css elements of the project are mostly done. I’ve found links to button styling from <a href="https://codepen.io/Brandon-Stoyles/pen/RajYmd">here</a>, 
+                    page background <a href="https://cdn.hipwallpaper.com/i/98/63/jBInyz.png">here</a>, 
+                    game background <a href="https://cdn.hipwallpaper.com/i/2/60/h8nAzM.png">here</a>, 
+                    and probably going to include sound from <a href="https://freesound.org/">Freesound</a>. 
+                    The view would be attached below the ball will bounce from the right to left dying on either side will spawn the ball near to the side of the game the player lost lives at. 
+                    In order to allow for more space for the game to be played since it will be played horizontally, I modified the existing css grid we’ve been given.
+                </p>
+                <br>
+                <center>
+                    <a class="center" href="../game/resources/images/WIPSS.png">
+                    <img src="../game/resources/images/WIPSS.png" alt="SS" height="500px">
+                </a>
+                </center>
+                <br>
+                <h2 style="font-size:30px;"><u>Week 10</u></h2>
+                <p>So on the topics of collisions I have used this  <a href="https://developer.mozilla.org/en-US/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Collision_detection">source</a> from Mozilla 
+                    developers for the task of ‘rip, mash and modifying’ the existing cos to fit my purposes. That course also helps me 
+                    understand how to store an array with two ‘directions’ at least this was how I thought about it based on the 
+                    explanation I found before.</p>
+
+                <p>So, I figured out how to make my paddle still move after they come in contact with the edge of the game bg. 
+                    The trick was to use an if else function that prevents 
+                    paddle.animate from running once the top and bottom points of the paddle obj’s y axis value has matched the bounds of the game bg.</p>
+
+                <p>BUT there is this weird bug that the paddles both left and right keep moving up or down 
+                    based on their last recorded key down function (be it up or down respectively), this happens when they lose a life.
+                     Pressing the opposite key can momentarily coax the 
+                    paddle to move in the opposite direction but the upon release of the opposite key the paddle will just move in its initial direction.</p>
+
+                <h2 style="font-size:30px;"><u>Week 11</u></h2>
+                <p> Wow okay, thanks Daniel for highlighted that the widow alert kinda screws everything up. 
+                    So I’ve taken the suggestion to create a pause() function but also not really. 
+                    I opted to have the ball be reset at their respective sides upon ball death. A
+                    fterwards an event listener of “keydown” on the space bar can get the ball going 
+                    in their respective directions on either side of the gameArea.
+                    (Instructions in HTML has been updated as well)
+                    (Added some CSS adjustments to make things more readable too)</p>
+
+                <p> Also besides the bug I also made ball collisions cause the ball to 
+                    move more erratically with the same trick I use for the ball paddle 
+                    collisions to make things less predictable. So right now with the 
+                    addition of random number generators it sometimes slows down but sometimes 
+                    speeds up. 
+                    <strong>This chaos is exciting, I thrive in it.</strong>
+                </p>
+
+                <p> You know what I think I’m mostly done. Now there’s a stretch goal of trying to make a 2 ball version (hard) of the 
+                    game work, even though with how fast the ball in moving its probably hard enough. 
+                    <strong>Then again I don’t think I can stretch very far.</strong> </p>
+
+                <h2 style="font-size:30px;"><u>Week 12</u></h2>
+
+                <p>I stretch. I tried. But I can stretch no more. The 2 ball (hard) version of the game was more complex than I thought. 
+                    I assumed just adding a second ball and adding a second layer of interactions(copied from ball 1) 
+                    for ball2 should technically work.
+                </p>
+
+                <p>It did not. Most collision events fail to trigger, balls fly off the play area and the game breaks i
+                    n more ways can one. I don’t think I can fix it. I believe the issues lies in how I’m nesting 
+                    the function but after spending over 4 hours on this I don’t think I can fix it in a way that makes sense.
+                </p>
+
+                <p>I’m running out of time and probably have to leave this feature out. Furthermore, I believe that this game might already be 
+                    difficult enough after I made the ball collision (ball and paddle, ball and brick) events highly unpredictable in 
+                    terms of both speed and angle(via a random number being subtracted/added to the x.rate and y.rate).
+                </p>
+
+                <p>In other news I have a small bug in resolving the window.alert problem I added a if-else conditional to 
+                    launch a stationary ball when a user key downs the spacebar. I intend to the ball to reset in the side which it died, 
+                    that’s works however when I use the spacebar to resume the game the ball may sometimes jump to the opposite 
+                    side I’m not sure why. Help.
+                    <strong>
+                        EDIT: I FIXED IT.
+                    </strong>
+                </p>
+   
+            <br>
+        </div>
+        <br>
+        <br>
+        <br>
+    </body>
+</html>
+
+<!--  <input class="competitiveStartButton" id="startButtonID" type="button" value="Start/Restart Competitive" height=""> -->
