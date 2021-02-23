@@ -1,0 +1,138 @@
+html, body {
+  height:99%;
+  width:99%;
+  background-color: #2B4162;
+}
+
+/* Sections of Layout
+-------------------------------------- */
+/* Generic styles for demo purposes
+-------------------------------------- */
+.container {
+  font-family: Courier, monospace;
+  color: #ffff;
+  font-size: 10px;
+  font-weight: lighter;
+  height:99%;
+  width:99%;
+}
+
+.container > * {
+  background-color: #EF8354;
+  padding: 1em;
+}
+
+/* Typically, you wouldn't specify a height or min-height on this, instead allowing your actual content (i.e., text, images, etc.) to dictate the height of your content area. But since this example has very minimal content, I've set a min-height to mimic a taller content area. */
+.content {
+  min-height: 40%;
+  overflow-y: scroll;
+  color: #ffff;
+
+}
+
+/* Sean's modifications */
+.link {
+  color: #ffff;
+}
+
+.link:hover {
+  color: #2B4162;
+}
+
+.Title1 {font-size: 20px;
+  font-weight:normal;}
+
+.image {
+  display: block;
+  margin-top:10px;
+}
+
+.headertext {
+  font-size: 18px;
+}
+
+
+.sideproject {
+  color: #EF8354;
+}
+
+/* Layout is stacked vertically by default (for narrower viewports), so give some breathing room between the sections. */
+/* Select all elements where parent is a container */
+.container > * {
+  margin-bottom: 2%;
+}
+
+/* Project buttons*/
+
+.finalProjButton{
+  background: #2B4162;
+	border-bottom: 6px inset rgba(0,0,0,.5);
+	border-left: 6px inset rgba(0,0,0,.5);
+	border-right: 6px inset rgba(255,255,255,.5);
+	border-top: 6px inset rgba(255,255,255,.5);
+	color: white;
+  cursor: pointer;
+  font-family: 'VT323';
+	font-size: 20px;
+	margin: 5px;
+	min-width: 20px;
+	padding: 5px;
+	text-transform: uppercase;
+	width: auto;
+}
+
+.finalProjButton:hover{
+	background: #3f5777;
+
+}
+
+.sideProjButton{
+  background: #000000;
+	border-bottom: 6px inset rgba(0,0,0,.5);
+	border-left: 6px inset rgba(0,0,0,.5);
+	border-right: 6px inset rgba(255,255,255,.5);
+	border-top: 6px inset rgba(255,255,255,.5);
+	color: white;
+  cursor: pointer;
+  font-family: 'VT323';
+	font-size: 20px;
+	margin: 5px;
+	min-width: 20px;
+	padding: 5px;
+	text-transform: uppercase;
+	width: auto;
+}
+
+.sideProjButton:hover{
+	background: #2e2e2e;
+
+}
+/* Now let's apply grid for wider viewports. */
+@media screen and (min-width: 40em) {
+  .container > * {
+    margin-bottom: 0;
+  }
+  /* Define the grid */
+  .container {
+    display: grid;
+    grid-template-columns: 15% 15% 15% 55%;
+    grid-gap: 1% 1%;
+    grid-template-rows: 10% auto 10%;
+  }
+  /* Place items on the grid */
+  .header {
+    grid-column: 1 / span 4;
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+  }
+  .sidebar {
+    grid-row-end: span 0;
+  }
+  .content {
+    grid-column: 3;
+  }
+
+}
+
+

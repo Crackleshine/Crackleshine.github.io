@@ -1,0 +1,359 @@
+html, body
+{
+  background: url("https://cdn.hipwallpaper.com/i/98/63/jBInyz.png") no-repeat center center fixed; 
+  background: url("../game/resources/images/webbg.png") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+h1 {
+	user-select: none;
+  font-size: 50px;
+  font-weight: bold;
+  font-family: 'Alegreya SC';
+  -webkit-text-fill-color: white;
+  text-align: center;
+}
+
+h2 {
+  color:white;
+	user-select: none;
+	font-size: 25px;
+	font-family: 'Alegreya SC'
+
+}
+
+p {
+  color:white;
+	user-select: none;
+	font-size: 15px;
+  font-family: 'Helvetica';
+  -webkit-text-stroke-width: 0.01px;
+}
+
+#gameArea {
+	border: 0px solid #000;
+	width: 1400px;
+	height: 700px;
+	margin-left: auto;
+  margin-right: auto;
+  background: url("../game/resources/images/gamebg.gif");
+  /*background: url("https://cdn.hipwallpaper.com/i/2/60/h8nAzM.png");*/
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+
+}
+
+/* Instructions
+.rightStartTitle{
+  position: relative;
+  left: 1180px;
+}
+
+.rightStartText{
+  position: relative;
+  left: 1045px;
+}
+
+.leftStartTitle{
+  position: relative;
+  left: 530px;
+  bottom: 63px;
+}
+
+.leftStartText{
+  position: relative;
+  left: 395px;
+  bottom: 63px;
+}
+*/
+
+/* Instructions New */
+#rightStartTitlediv{
+  position: absolute;
+  top:90px;
+  right: 200px;
+  text-align: center;
+
+}
+
+#leftStartTitlediv{
+  position: absolute;
+  top:90px;
+  left: 200px;
+  text-align: center;
+
+}
+
+.StartTextdiv{  
+  border-style: solid;
+  border-radius: 10px;
+  border-width: 1px;
+  border-color: white; 
+
+
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 15px;
+
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.title{
+  position: relative;
+  right: 15px;
+  text-align: center;
+}
+
+/* Start buttons src:"https://codepen.io/Brandon-Stoyles/pen/RajYmd" */
+.StartButtonDiv{
+  position: relative;
+  text-align: center;
+}
+
+.StartButton{
+  background: #482001;
+	border-bottom: 6px inset rgba(0,0,0,.5);
+	border-left: 6px inset rgba(0,0,0,.5);
+	border-right: 6px inset rgba(255,255,255,.5);
+	border-top: 6px inset rgba(255,255,255,.5);
+	color: white;
+  cursor: pointer;
+  font-family: 'VT323';
+	font-size: 20px;
+	margin: 5px;
+	min-width: 20px;
+	padding: 5px;
+	text-transform: uppercase;
+  width: auto;
+
+  position: relative;
+  right: 10px;
+  text-align: center;
+}
+
+.StartButton:hover{
+	background: #6e3f1a;
+}
+
+.navDiv{
+  margin-top: 800px;
+  align-items: center;
+  justify-content: center;
+}
+
+.LRButton{
+  background: #2B4162;
+	border-bottom: 6px inset rgba(0,0,0,.5);
+	border-left: 6px inset rgba(0,0,0,.5);
+	border-right: 6px inset rgba(255,255,255,.5);
+	border-top: 6px inset rgba(255,255,255,.5);
+	color: white;
+  cursor: pointer;
+  font-family: 'VT323';
+	font-size: 20px;
+	margin: 5px;
+	min-width: 20px;
+  padding: 5px;
+  font-size: 50px;
+	text-transform: uppercase;
+	width: auto;
+}
+
+.LRButton:hover{
+  background: #3f5777;
+
+}
+
+.GameButton{
+  background: #482001;
+	border-bottom: 6px inset rgba(0,0,0,.5);
+	border-left: 6px inset rgba(0,0,0,.5);
+	border-right: 6px inset rgba(255,255,255,.5);
+	border-top: 6px inset rgba(255,255,255,.5);
+	color: white;
+  cursor: pointer;
+  font-family: 'VT323';
+	font-size: 20px;
+	margin: 5px;
+	min-width: 20px;
+  padding: 5px;
+  font-size: 50px;
+	text-transform: uppercase;
+	width: auto;
+}
+
+.GameButton:hover{
+	background: #522a0c;
+}
+
+/*-------------------------------------- Logs+Reflecion Styling*/
+.box-0 {
+	background-color:#101E20;
+	padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 10px;
+	position:80px;
+	color: #ffff;
+
+	text-align: left;
+	font-family: 'Helvetica';
+	letter-spacing: 0.1em; 
+	font-size: 15px;
+	font-weight: lighter;
+	line-height: 1.6em;
+
+	border-style: solid;
+	border-radius: 10px;
+  border-width: 3px;
+  border-color: white; 
+  
+  margin-left: 300px;
+  margin-right: 300px;
+}
+
+
+.Box-0container {  
+	display: grid;  
+	justify-content: center;
+	margin: 0px auto;
+  grid-template-rows: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+
+#LivesScoreTime{ 
+  position: absolute;
+  top:180px;
+  left: -185px;
+  text-align: center;
+  font-size: 15px;
+
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 10px;
+	position:80px;
+
+  border-style: solid;
+	border-radius: 10px;
+  border-width: 3px;
+  border-color: white; 
+  
+  background-color: rgba(0, 0, 0, 0.5);
+  
+}
+
+
+/*-------------------------------------- 2 ball hard mode
+#LivesScoreTimeEasyHard{ 
+  position: absolute;
+  top:250px;
+  left: -185px;
+  text-align: center;
+  font-size: 15px;
+
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 10px;
+	position:80px;
+
+  border-style: solid;
+	border-radius: 10px;
+  border-width: 3px;
+	border-color: white; 
+  
+}
+
+#EasyHard{
+  position: absolute;
+  top:207px;
+  left: 40px;
+  text-align: center;
+  font-size: 15px;
+
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 10px;
+	position:80px;
+
+  border-style: solid;
+	border-radius: 10px;
+  border-width: 3px;
+	border-color: white; 
+  
+}
+
+}.competitiveStartButton{
+  position: relative;
+  top: 50px;
+  left: 1392px;
+  
+}
+*/
+
+
+
+/* Sections of Layout
+-------------------------------------- */
+/* Generic styles for demo purposes
+-------------------------------------- */
+.container {
+  background-color: "black";
+  font-family: 'Alegreya SC';
+  height:98%;
+  width:98%;
+}
+
+.container > * {
+  background-color: rgb(0, 0, 0);
+  padding: 0%;
+}
+
+/* Typically, you wouldn't specify a height or min-height on this, instead allowing your actual content (i.e., text, images, etc.) to dictate the height of your content area. But since this example has very minimal content, I've set a min-height to mimic a taller content area. */
+.content {
+  min-height: 40%;
+  overflow-y: scroll;
+  margin: 0;
+  padding: 0; 
+}
+
+/* Layout is stacked vertically by default (for narrower viewports), so give some breathing room between the sections. */
+/* Select all elements where parent is a container */
+.container > * {
+  margin-bottom: 2%;
+}
+
+
+
+/* Now let's apply grid for wider viewports. */
+@media screen and (min-width: 40em) {
+  .container > * {
+    margin-bottom: 0;
+  }
+  /* Define the grid */
+  .container {
+    display: grid;
+    grid-template-columns: 15% 75% 15%;
+    grid-gap: 2% 2%;
+    grid-template-rows: 10% auto 10%;
+  }
+  /* Place items on the grid */
+  .header {
+    color:black;
+    grid-column: 1 / span 3;
+
+  }
+  .sidebar {
+    color:black;
+    grid-row-end: span 2;
+  }
+  .content {
+    color:black;
+    grid-column: 2;
+  }
+
+}
