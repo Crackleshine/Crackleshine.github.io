@@ -1,0 +1,134 @@
+html{
+	height:100%;
+	width:100%;
+}
+
+h1 {object-position: center;
+	color: lightgray;
+	opacity: 80%;
+	font-weight: 5;
+	font-size: 35px;}
+h2 {color: #f7cac9;
+	font-weight:10;
+	font-size: 35px;}
+h3 {color: #91A8d0;
+	font-weight:10;
+ 	font-size: 35px;}
+
+.index {
+	background-color:#2B4162;
+	color: #ffff;
+	font-family: Courier, monospace;
+	font-size: 20px;
+	font-weight: normal;
+	margin: 20;
+	
+}
+
+.box-0 {
+	background-color:#2B4162;
+	padding-left: 20px;
+	padding-right: 20px;
+	position:80px;
+	color: #ffff;
+	font-family: Courier, monospace;
+	font-size: 15px;
+	font-weight: lighter;
+	line-height:20px;
+	margin: 20;
+	border-style: solid;
+    border-width: 5px;
+	border-color: white;
+}
+
+.end1 {
+	background-color:#91A8d0;
+	color: #ffff;
+	font-family: Courier, monospace;
+	font-size: 20px;
+	font-weight: normal;
+	margin: 20;
+	
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 20%;
+}
+
+
+.box-1 {
+	background-color:#91A8d0;
+	padding-left: 20px;
+	padding-right: 20px;
+	position:80px;
+	color: #ffff;
+	font-family: Courier, monospace;
+	font-size: 15px;
+	font-weight: lighter;
+	line-height:20px;
+	margin: 20;
+	border-style: solid;
+    border-width: 5px;
+	border-color: white;
+}
+
+.end2 {
+	background-color:#f7cac9;
+	color: #ffff;
+	font-family: Courier, monospace;
+	font-size: 20px;
+	font-weight: normal;
+	margin-left: 50;
+	
+}
+
+.box-2 {
+	background-color:#f7cac9;
+	padding-left: 20px;
+	padding-right: 20px;
+	position: 80px;
+	font-family: Courier, monospace;
+	font-size: 15px;
+	font-weight: lighter;
+	line-height:20px;
+	margin: 20;
+	border-style: solid;
+    border-width: 5px;
+	border-color: white;
+}
+
+.button1 {
+	padding-left: 15px;
+  	left: 15px;
+  	border: 3px;
+	text-indent: 10em;
+	text-align: center; 
+	background-color: #91A8d0;
+	color:#fff;
+	padding: 10px 15px;
+	border:none;
+
+}
+
+.button2 {
+	padding-left: 15px;
+  	left: 15px;
+  	border: 3px;
+	text-indent: 10em;
+	margin-left: auto;
+    margin-right: auto;
+    background-color: #f7cac9;
+	color:#fff;
+	padding: 10px 15px;
+	border:none;
+
+}
+
+.return {text-indent: 10em;
+	background-color: #cccc;
+	color:#fff;
+	padding: 10px 15px;
+	border:none;}

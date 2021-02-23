@@ -1,0 +1,128 @@
+html, body {
+  height:100%;
+  width:100%;
+  background-color: #2B4162;
+  background-image: url("https://images.unsplash.com/photo-1555863809-6a20ba7ea755?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2551&q=80"); 
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Sections of Layout
+-------------------------------------- */
+/* Generic styles for demo purposes
+-------------------------------------- */
+.container {
+  font-family: Courier, monospace;
+  color: #ffff;
+  font-size: 10px;
+  font-weight: lighter;
+  height:99%;
+  width:99%;
+}
+
+.container > * {
+  background-color: #EF8354;
+  padding: 1em;
+  border-radius: 10px;
+}
+
+.sidebar {
+  background-image: url("https://images.unsplash.com/photo-1594878323962-561fbd6357d9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1234&q=80");
+  height: auto; 
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+/* Typically, you wouldn't specify a height or min-height on this, instead allowing your actual content (i.e., text, images, etc.) to dictate the height of your content area. But since this example has very minimal content, I've set a min-height to mimic a taller content area. */
+.content {
+  min-height: 40%;
+  overflow-y: scroll;
+  color: #ffff;
+
+}
+
+/* Sean's modifications */
+.link {
+  color: #ffff;
+}
+
+.link:hover {
+  color: #2B4162;
+}
+
+#sectionhead {
+  font-size: 20px;
+  font-weight:lighter;
+  text-align: center;
+  }
+
+#headertext {
+  font-size: 20px;
+  font-weight:lighter;
+  text-align: left;
+  }
+
+
+#articletext {
+  margin: auto;
+  background-color: #2B4162;
+  font-weight:lighter;
+  font-size: 10px;
+  margin: 20px;
+  padding: 40px;
+  border-radius: 10px;
+  }
+
+.image {
+  display: block;
+  margin-top:10px;
+  text-align: center;
+}
+
+.headertext {
+  font-size: 18px;
+}
+
+/* Layout is stacked vertically by default (for narrower viewports), so give some breathing room between the sections. */
+/* Select all elements where parent is a container */
+.container > * {
+  margin-bottom: 2%;
+}
+
+/* Now let's apply grid for wider viewports. */
+@media screen and (min-width: 40em) {
+  .container > * {
+    margin-bottom: 0;
+  }
+  /* Define the grid */
+  .container {
+    display: grid;
+    grid-template-columns: 15% 15% 15% 55%;
+    grid-gap: 1% 1%;
+    grid-template-rows: 10 auto 5%;
+  }
+  /* Place items on the grid */
+  .header {
+    grid-column: 1 / span 4;
+    text-align: center;
+    display: table-cell;
+    align-items:stretch;  
+  }
+
+  .sidebar {
+    grid-row-end: span 0;
+  }
+
+  .footer {
+    grid-column: 1 / span 4;
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+    background-image: linear-gradient(to right, orange,yellow,green);
+  }
+
+
+
+
